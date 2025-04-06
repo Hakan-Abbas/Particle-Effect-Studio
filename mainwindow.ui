@@ -1,0 +1,4647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Particle Effect Studio</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resource.qrc">
+    <normaloff>:/resource/icons/snowing.png</normaloff>:/resource/icons/snowing.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="graph" name="graphicsView">
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="interactive">
+        <bool>true</bool>
+       </property>
+       <property name="renderHints">
+        <set>QPainter::Antialiasing|QPainter::HighQualityAntialiasing|QPainter::SmoothPixmapTransform|QPainter::TextAntialiasing</set>
+       </property>
+       <property name="transformationAnchor">
+        <enum>QGraphicsView::AnchorUnderMouse</enum>
+       </property>
+      </widget>
+      <widget class="QToolBox" name="toolBox">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="tabSpacing">
+        <number>6</number>
+       </property>
+       <widget class="QWidget" name="pageImage">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>271</width>
+          <height>845</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Image</string>
+        </attribute>
+        <widget class="QFrame" name="frameImage">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>250</width>
+           <height>597</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>140</y>
+            <width>231</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Geometry</string>
+          </property>
+          <widget class="QDoubleSpinBox" name="doubleSpinScaleY">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>50</y>
+             <width>50</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="minimum">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinScaleX">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>50</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="minimum">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinScale">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>26</y>
+             <width>50</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="minimum">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_23">
+           <property name="geometry">
+            <rect>
+             <x>14</x>
+             <y>26</y>
+             <width>51</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Scale XY</string>
+           </property>
+          </widget>
+          <widget class="QDial" name="dial">
+           <property name="geometry">
+            <rect>
+             <x>175</x>
+             <y>22</y>
+             <width>51</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+           <property name="invertedControls">
+            <bool>false</bool>
+           </property>
+           <property name="wrapping">
+            <bool>false</bool>
+           </property>
+           <property name="notchesVisible">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_26">
+           <property name="geometry">
+            <rect>
+             <x>124</x>
+             <y>26</y>
+             <width>51</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Rotation</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkQuality">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>80</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>High Quality</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRotation">
+           <property name="geometry">
+            <rect>
+             <x>125</x>
+             <y>50</y>
+             <width>50</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkFit">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>70</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fit Image</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkHide">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>80</y>
+             <width>41</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Hide</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>260</y>
+            <width>231</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Color Spaces</string>
+          </property>
+          <widget class="QFrame" name="frameRGB">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>91</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <widget class="QPushButton" name="pushB">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>0</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>B</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushR">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>R</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushG">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>0</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>G</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="frameYUV">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>50</y>
+             <width>91</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <widget class="QPushButton" name="pushV">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>0</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>V</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushY">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Y</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushU">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>0</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>U</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QRadioButton" name="radioRGB">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>81</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RGB Space</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioYUV">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>30</y>
+             <width>81</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>YUV Space</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>360</y>
+            <width>231</width>
+            <height>225</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Color Correction</string>
+          </property>
+          <widget class="QSpinBox" name="SpinColorR">
+           <property name="geometry">
+            <rect>
+             <x>48</x>
+             <y>29</y>
+             <width>45</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_29">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>59</y>
+             <width>37</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Green</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="SpinColorG">
+           <property name="geometry">
+            <rect>
+             <x>48</x>
+             <y>59</y>
+             <width>45</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_30">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>29</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Red</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinColorB">
+           <property name="geometry">
+            <rect>
+             <x>48</x>
+             <y>89</y>
+             <width>45</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_28">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>89</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Blue</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderColorR">
+           <property name="geometry">
+            <rect>
+             <x>96</x>
+             <y>29</y>
+             <width>129</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderColorG">
+           <property name="geometry">
+            <rect>
+             <x>95</x>
+             <y>60</y>
+             <width>129</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderColorB">
+           <property name="geometry">
+            <rect>
+             <x>96</x>
+             <y>90</y>
+             <width>129</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_40">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>119</y>
+             <width>37</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Bright.</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderGamma">
+           <property name="geometry">
+            <rect>
+             <x>96</x>
+             <y>180</y>
+             <width>129</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>500</number>
+           </property>
+           <property name="value">
+            <number>400</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_41">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>149</y>
+             <width>37</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Const.</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="SpinContrast">
+           <property name="geometry">
+            <rect>
+             <x>48</x>
+             <y>149</y>
+             <width>45</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="SpinBrightness">
+           <property name="geometry">
+            <rect>
+             <x>48</x>
+             <y>119</y>
+             <width>45</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderBrightness">
+           <property name="geometry">
+            <rect>
+             <x>95</x>
+             <y>119</y>
+             <width>129</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_42">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>179</y>
+             <width>41</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Gamma</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderContrast">
+           <property name="geometry">
+            <rect>
+             <x>95</x>
+             <y>150</y>
+             <width>129</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-255</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinGamma">
+           <property name="geometry">
+            <rect>
+             <x>48</x>
+             <y>179</y>
+             <width>45</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>5.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>0</y>
+            <width>231</width>
+            <height>131</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <widget class="QPushButton" name="pushReset">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>74</y>
+             <width>70</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Reset</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushNegative">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>74</y>
+             <width>70</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Negative</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinHeight">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>50</y>
+             <width>50</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="value">
+            <number>720</number>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushNew">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>26</y>
+             <width>70</width>
+             <height>47</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>New</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushSave">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>50</y>
+             <width>70</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Save</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_21">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>26</y>
+             <width>20</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>W</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinWidth">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>26</y>
+             <width>50</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="value">
+            <number>1280</number>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushGray">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>74</y>
+             <width>70</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Gray</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_22">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>50</y>
+             <width>20</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>H</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushOpen">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>26</y>
+             <width>70</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Open</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushColorize">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>98</y>
+             <width>70</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Colorize</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_38">
+           <property name="geometry">
+            <rect>
+             <x>17</x>
+             <y>99</y>
+             <width>61</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Color Count</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboColorCount">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>98</y>
+             <width>70</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="currentIndex">
+            <number>4</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>4</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>16</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>32</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>64</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>128</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QScrollArea" name="scrollAreaImage">
+         <property name="geometry">
+          <rect>
+           <x>96</x>
+           <y>616</y>
+           <width>121</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAsNeeded</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_7">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>192</width>
+            <height>159</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pageRain">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>271</width>
+          <height>845</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Rain</string>
+        </attribute>
+        <widget class="QScrollArea" name="scrollAreaRain">
+         <property name="geometry">
+          <rect>
+           <x>88</x>
+           <y>624</y>
+           <width>101</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAsNeeded</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_8">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>192</width>
+            <height>159</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frameRain">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>250</width>
+           <height>605</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>44</y>
+            <width>233</width>
+            <height>117</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <widget class="QSpinBox" name="spinRainFog">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>53</y>
+             <width>55</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderRainCount">
+           <property name="geometry">
+            <rect>
+             <x>63</x>
+             <y>25</y>
+             <width>101</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>500</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderRainFog">
+           <property name="geometry">
+            <rect>
+             <x>63</x>
+             <y>53</y>
+             <width>101</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_13">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>53</y>
+             <width>46</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fog Level</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRainCount">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>25</y>
+             <width>55</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>500</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>25</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Count</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRainColor">
+           <property name="geometry">
+            <rect>
+             <x>88</x>
+             <y>81</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelRainFogColor">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>81</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushRainColor">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>80</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Rain Color</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushRainFogColor">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>80</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fog Color</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushRainLayerDelete">
+          <property name="geometry">
+           <rect>
+            <x>218</x>
+            <y>364</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/remove.png</normaloff>:/resource/icons/remove.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushRainLayerUp">
+          <property name="geometry">
+           <rect>
+            <x>178</x>
+            <y>364</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/up.png</normaloff>:/resource/icons/up.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushRain">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>8</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Add Rain</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_24">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>364</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Rain Layers</string>
+          </property>
+         </widget>
+         <widget class="QTableWidget" name="tableWidgetRain">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>394</y>
+            <width>230</width>
+            <height>200</height>
+           </rect>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="columnCount">
+           <number>2</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column/>
+          <column/>
+         </widget>
+         <widget class="QPushButton" name="pushRainLayerDown">
+          <property name="geometry">
+           <rect>
+            <x>198</x>
+            <y>364</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/down.png</normaloff>:/resource/icons/down.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushRainClear">
+          <property name="geometry">
+           <rect>
+            <x>96</x>
+            <y>8</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Clear Rain</string>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>172</y>
+            <width>233</width>
+            <height>185</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Parameters</string>
+          </property>
+          <widget class="QSpinBox" name="spinRainBlurRadiusMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>152</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>3</number>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinRainThicknessMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>100</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRainBlurRadiusMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>152</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>2</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_25">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>25</y>
+             <width>53</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Maximum</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRainRotationMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>74</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>360</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_31">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>48</y>
+             <width>85</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Size</string>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinRainOpacityMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>126</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.500000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_10">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>74</y>
+             <width>93</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Rotation</string>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinRainThicknessMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>100</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>2.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_11">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>97</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Thickness</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRainRotationMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>74</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>360</number>
+           </property>
+           <property name="value">
+            <number>35</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRainSizeMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>48</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>80</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRainSizeMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>48</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>50</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>126</y>
+             <width>97</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Opacity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_8">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>152</y>
+             <width>85</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Blur </string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_9">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>25</y>
+             <width>49</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Minimum</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinRainOpacityMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>126</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.700000000000000</double>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pageSnow">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>271</width>
+          <height>845</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Snow</string>
+        </attribute>
+        <widget class="QScrollArea" name="scrollAreaSnow">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>692</y>
+           <width>101</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAsNeeded</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>192</width>
+            <height>159</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frameSnow">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>250</width>
+           <height>661</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QTableWidget" name="tableWidgetSnow">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>438</y>
+            <width>230</width>
+            <height>200</height>
+           </rect>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="columnCount">
+           <number>2</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column/>
+          <column/>
+         </widget>
+         <widget class="QPushButton" name="pushSnowLayerDelete">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>408</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/remove.png</normaloff>:/resource/icons/remove.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushSnow">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>4</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Add Snow</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushSnowLayerDown">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>408</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/down.png</normaloff>:/resource/icons/down.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>164</y>
+            <width>233</width>
+            <height>237</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Parameters</string>
+          </property>
+          <widget class="QSpinBox" name="spinSnowBlurRadiusMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>124</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>3</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowBlurRadiusMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>124</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>2</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_45">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>25</y>
+             <width>53</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Maximum</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowRotationMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>74</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_47">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>48</y>
+             <width>85</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Size</string>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinSnowOpacityMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>98</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.700000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_16">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>74</y>
+             <width>93</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Rotation</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>176</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Motion Size</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowRotationMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>74</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-180</number>
+           </property>
+           <property name="maximum">
+            <number>180</number>
+           </property>
+           <property name="value">
+            <number>35</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowSizeMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>48</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>6</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowSizeMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>48</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>3</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>98</y>
+             <width>97</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Opacity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_19">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>124</y>
+             <width>85</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Blur </string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_20">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>25</y>
+             <width>49</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Minimum</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinSnowOpacityMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>98</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>150</y>
+             <width>81</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Kernel Size</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowKernelMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>148</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>5</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowKernelMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>148</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowMotionMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>176</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowMotionMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>176</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="checkBoxCloudy">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>204</y>
+             <width>70</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Cloudy</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>36</y>
+            <width>233</width>
+            <height>109</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <widget class="QSpinBox" name="spinSnowFog">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>53</y>
+             <width>55</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderSnowCount">
+           <property name="geometry">
+            <rect>
+             <x>63</x>
+             <y>25</y>
+             <width>101</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderSnowFog">
+           <property name="geometry">
+            <rect>
+             <x>63</x>
+             <y>53</y>
+             <width>101</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_48">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>53</y>
+             <width>46</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fog Level</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinSnowCount">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>25</y>
+             <width>55</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_49">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>25</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Count</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelSnowColor">
+           <property name="geometry">
+            <rect>
+             <x>88</x>
+             <y>81</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelSnowFogColor">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>81</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushSnowFogColor">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>80</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fog Color</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushSnowColor">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>80</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Snow Color</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushSnowClear">
+          <property name="geometry">
+           <rect>
+            <x>92</x>
+            <y>4</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Clear Snow</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushSnowLayerUp">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>408</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/up.png</normaloff>:/resource/icons/up.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_50">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>408</y>
+            <width>61</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Snow Layers</string>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pageBokeh">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>271</width>
+          <height>845</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Fake Bokeh</string>
+        </attribute>
+        <widget class="QScrollArea" name="scrollAreaBokeh">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>164</y>
+           <width>101</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAsNeeded</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_10">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>192</width>
+            <height>159</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QFrame" name="frameBokeh">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>250</width>
+           <height>761</height>
+          </rect>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>34</y>
+            <width>233</width>
+            <height>137</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>General</string>
+          </property>
+          <widget class="QSpinBox" name="spinBokehFog">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>72</y>
+             <width>55</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderBokehCount">
+           <property name="geometry">
+            <rect>
+             <x>63</x>
+             <y>25</y>
+             <width>101</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderBokehFog">
+           <property name="geometry">
+            <rect>
+             <x>63</x>
+             <y>72</y>
+             <width>101</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_27">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>71</y>
+             <width>46</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fog Level</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_32">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>25</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Count</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBokehCount">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>20</y>
+             <width>55</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_15">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>48</y>
+             <width>53</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Shape</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBokehSide">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>48</y>
+             <width>55</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>20</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="sliderBokehSide">
+           <property name="geometry">
+            <rect>
+             <x>64</x>
+             <y>48</y>
+             <width>101</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>20</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::NoTicks</enum>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushBokehFogColor">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>104</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Fog Color</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="labelBokehFogColor">
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>104</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>310</y>
+            <width>233</width>
+            <height>209</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Parameters</string>
+          </property>
+          <widget class="QSpinBox" name="spinBokehBlurMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>126</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBokehBlurMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>126</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>6</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_33">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>25</y>
+             <width>53</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Maximum</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_34">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>48</y>
+             <width>85</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Size</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_14">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>74</y>
+             <width>93</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Rotation</string>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinBokehThicknessMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>152</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>5.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_35">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>152</y>
+             <width>97</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Edge Thickness</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_36">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>97</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Opacity</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_37">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>126</y>
+             <width>85</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Particle Blur </string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_39">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>25</y>
+             <width>49</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Minimum</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinBokehOpacityMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>100</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.800000000000000</double>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBokehSizeMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>48</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBokehSizeMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>48</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>150</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBokehRotationMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>74</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>360</number>
+           </property>
+           <property name="value">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinBokehRotationMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>74</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>360</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinBokehThicknessMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>152</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>20.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>4.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinBokehOpacityMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>100</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.600000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinBokehEdgeOpacityMax">
+           <property name="geometry">
+            <rect>
+             <x>172</x>
+             <y>178</y>
+             <width>50</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.900000000000000</double>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="spinBokehEdgeOpacityMin">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>178</y>
+             <width>51</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>1.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.800000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_43">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>178</y>
+             <width>97</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Edge Opacity</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pushBokehLayerUp">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>524</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/up.png</normaloff>:/resource/icons/up.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QTableWidget" name="tableWidgetBokeh">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>554</y>
+            <width>230</width>
+            <height>200</height>
+           </rect>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="columnCount">
+           <number>2</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column/>
+          <column/>
+         </widget>
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="geometry">
+           <rect>
+            <x>8</x>
+            <y>178</y>
+            <width>233</width>
+            <height>117</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Colors</string>
+          </property>
+          <widget class="QStackedWidget" name="stackedBokeh">
+           <property name="geometry">
+            <rect>
+             <x>4</x>
+             <y>43</y>
+             <width>225</width>
+             <height>73</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="page">
+            <widget class="QLabel" name="labelBokehColor2">
+             <property name="geometry">
+              <rect>
+               <x>196</x>
+               <y>12</y>
+               <width>21</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushBokehColor1">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="geometry">
+              <rect>
+               <x>4</x>
+               <y>12</y>
+               <width>75</width>
+               <height>23</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Color 1</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushBokehColor2">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="geometry">
+              <rect>
+               <x>120</x>
+               <y>12</y>
+               <width>75</width>
+               <height>23</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Color 2</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="labelBokehColor1">
+             <property name="geometry">
+              <rect>
+               <x>80</x>
+               <y>12</y>
+               <width>21</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <widget class="QLabel" name="label_44">
+             <property name="geometry">
+              <rect>
+               <x>9</x>
+               <y>44</y>
+               <width>32</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Radius</string>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="spinBokehRadius">
+             <property name="geometry">
+              <rect>
+               <x>173</x>
+               <y>43</y>
+               <width>43</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+            </widget>
+            <widget class="QSlider" name="sliderBokehRadius">
+             <property name="geometry">
+              <rect>
+               <x>47</x>
+               <y>44</y>
+               <width>121</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>20</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+            <widget class="QSlider" name="sliderBokehArea">
+             <property name="geometry">
+              <rect>
+               <x>47</x>
+               <y>19</y>
+               <width>121</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="maximum">
+              <number>500</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="spinBokehArea">
+             <property name="geometry">
+              <rect>
+               <x>173</x>
+               <y>15</y>
+               <width>43</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>500</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_46">
+             <property name="geometry">
+              <rect>
+               <x>9</x>
+               <y>19</y>
+               <width>23</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>Area</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QRadioButton" name="radioColorManual">
+           <property name="geometry">
+            <rect>
+             <x>8</x>
+             <y>28</y>
+             <width>61</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Manuel</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioColorClick">
+           <property name="geometry">
+            <rect>
+             <x>88</x>
+             <y>28</y>
+             <width>65</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>By Click</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioColorSmart">
+           <property name="geometry">
+            <rect>
+             <x>168</x>
+             <y>28</y>
+             <width>65</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Smart</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QLabel" name="label_51">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>524</y>
+            <width>69</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Bokeh Layers</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushBokehLayerDelete">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>524</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/remove.png</normaloff>:/resource/icons/remove.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushBokeh">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>4</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Add Bokeh</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushBokehClear">
+          <property name="geometry">
+           <rect>
+            <x>92</x>
+            <y>4</y>
+            <width>75</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Clear Bokeh</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushBokehLayerDown">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>524</y>
+            <width>23</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="resource.qrc">
+            <normaloff>:/resource/icons/down.png</normaloff>:/resource/icons/down.png</iconset>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="pageReaBokeh">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>271</width>
+          <height>845</height>
+         </rect>
+        </property>
+        <attribute name="label">
+         <string>Real Bokeh</string>
+        </attribute>
+        <widget class="QTabWidget" name="tabWidgetRealBokeh">
+         <property name="geometry">
+          <rect>
+           <x>8</x>
+           <y>4</y>
+           <width>250</width>
+           <height>177</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Style 1</string>
+          </attribute>
+          <widget class="QCheckBox" name="checkBoxRealBokehSharp">
+           <property name="geometry">
+            <rect>
+             <x>136</x>
+             <y>120</y>
+             <width>93</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Sharp Edges</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushRealBokeh1">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>112</y>
+             <width>101</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Add Bokeh</string>
+           </property>
+          </widget>
+          <widget class="QDoubleSpinBox" name="doubleSpinRealBokeh">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>64</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.100000000000000</double>
+           </property>
+           <property name="value">
+            <double>1.000000000000000</double>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>136</x>
+             <y>8</y>
+             <width>21</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Side</string>
+           </property>
+          </widget>
+          <widget class="QGraphicsView" name="graphicsViewRealBokeh">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>8</y>
+             <width>101</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="renderHints">
+            <set>QPainter::Antialiasing|QPainter::HighQualityAntialiasing|QPainter::SmoothPixmapTransform|QPainter::TextAntialiasing</set>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRealBokehS">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>36</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>3</number>
+           </property>
+           <property name="maximum">
+            <number>101</number>
+           </property>
+           <property name="singleStep">
+            <number>2</number>
+           </property>
+           <property name="value">
+            <number>21</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="realBokehLimit">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>92</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>200</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinRealBokehN">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>8</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>136</x>
+             <y>36</y>
+             <width>37</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Radius</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>136</x>
+             <y>64</y>
+             <width>41</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Gamma</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_52">
+           <property name="geometry">
+            <rect>
+             <x>136</x>
+             <y>92</y>
+             <width>41</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Limit</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Style 2</string>
+          </attribute>
+          <widget class="QSpinBox" name="limit">
+           <property name="geometry">
+            <rect>
+             <x>64</x>
+             <y>12</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>50</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>150</number>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushRealBokeh2">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>68</y>
+             <width>101</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Add Bokeh</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_55">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>12</y>
+             <width>47</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Limit</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_58">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>40</y>
+             <width>45</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Radius</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="bokehSize">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>40</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>30</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_59">
+           <property name="geometry">
+            <rect>
+             <x>16</x>
+             <y>40</y>
+             <width>45</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Spacing</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="blur">
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>68</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_60">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>68</y>
+             <width>47</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Blur</string>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="XY">
+           <property name="geometry">
+            <rect>
+             <x>64</x>
+             <y>40</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>255</number>
+           </property>
+           <property name="value">
+            <number>20</number>
+           </property>
+          </widget>
+          <widget class="QSpinBox" name="spinS">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>184</x>
+             <y>12</y>
+             <width>50</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="maximum">
+            <number>64</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_53">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>12</y>
+             <width>21</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Side</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>graph</class>
+   <extends>QGraphicsView</extends>
+   <header>graph.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>spinWidth</tabstop>
+  <tabstop>spinHeight</tabstop>
+  <tabstop>pushNew</tabstop>
+  <tabstop>pushOpen</tabstop>
+  <tabstop>pushSave</tabstop>
+  <tabstop>pushReset</tabstop>
+  <tabstop>pushNegative</tabstop>
+  <tabstop>pushGray</tabstop>
+  <tabstop>comboColorCount</tabstop>
+  <tabstop>pushColorize</tabstop>
+  <tabstop>doubleSpinScale</tabstop>
+  <tabstop>doubleSpinScaleX</tabstop>
+  <tabstop>doubleSpinScaleY</tabstop>
+  <tabstop>spinRotation</tabstop>
+  <tabstop>dial</tabstop>
+  <tabstop>checkFit</tabstop>
+  <tabstop>checkQuality</tabstop>
+  <tabstop>radioRGB</tabstop>
+  <tabstop>radioYUV</tabstop>
+  <tabstop>pushR</tabstop>
+  <tabstop>pushG</tabstop>
+  <tabstop>pushB</tabstop>
+  <tabstop>pushY</tabstop>
+  <tabstop>pushU</tabstop>
+  <tabstop>pushV</tabstop>
+  <tabstop>SpinColorR</tabstop>
+  <tabstop>sliderColorR</tabstop>
+  <tabstop>SpinColorG</tabstop>
+  <tabstop>sliderColorG</tabstop>
+  <tabstop>spinColorB</tabstop>
+  <tabstop>sliderColorB</tabstop>
+  <tabstop>SpinBrightness</tabstop>
+  <tabstop>sliderBrightness</tabstop>
+  <tabstop>SpinContrast</tabstop>
+  <tabstop>sliderContrast</tabstop>
+  <tabstop>spinGamma</tabstop>
+  <tabstop>sliderGamma</tabstop>
+  <tabstop>pushRain</tabstop>
+  <tabstop>pushRainClear</tabstop>
+  <tabstop>sliderRainCount</tabstop>
+  <tabstop>spinRainCount</tabstop>
+  <tabstop>sliderRainFog</tabstop>
+  <tabstop>spinRainFog</tabstop>
+  <tabstop>pushRainColor</tabstop>
+  <tabstop>pushRainFogColor</tabstop>
+  <tabstop>spinRainSizeMin</tabstop>
+  <tabstop>spinRainSizeMax</tabstop>
+  <tabstop>spinRainRotationMin</tabstop>
+  <tabstop>spinRainRotationMax</tabstop>
+  <tabstop>spinRainThicknessMin</tabstop>
+  <tabstop>spinRainThicknessMax</tabstop>
+  <tabstop>spinRainOpacityMin</tabstop>
+  <tabstop>spinRainOpacityMax</tabstop>
+  <tabstop>spinRainBlurRadiusMin</tabstop>
+  <tabstop>spinRainBlurRadiusMax</tabstop>
+  <tabstop>pushRainLayerUp</tabstop>
+  <tabstop>pushRainLayerDown</tabstop>
+  <tabstop>pushRainLayerDelete</tabstop>
+  <tabstop>tableWidgetRain</tabstop>
+  <tabstop>pushSnow</tabstop>
+  <tabstop>pushSnowClear</tabstop>
+  <tabstop>sliderSnowCount</tabstop>
+  <tabstop>spinSnowCount</tabstop>
+  <tabstop>sliderSnowFog</tabstop>
+  <tabstop>spinSnowFog</tabstop>
+  <tabstop>pushSnowColor</tabstop>
+  <tabstop>pushSnowFogColor</tabstop>
+  <tabstop>spinSnowSizeMin</tabstop>
+  <tabstop>spinSnowSizeMax</tabstop>
+  <tabstop>spinSnowRotationMin</tabstop>
+  <tabstop>spinSnowRotationMax</tabstop>
+  <tabstop>spinSnowOpacityMin</tabstop>
+  <tabstop>spinSnowOpacityMax</tabstop>
+  <tabstop>spinSnowBlurRadiusMin</tabstop>
+  <tabstop>spinSnowBlurRadiusMax</tabstop>
+  <tabstop>spinSnowKernelMin</tabstop>
+  <tabstop>spinSnowKernelMax</tabstop>
+  <tabstop>spinSnowMotionMin</tabstop>
+  <tabstop>spinSnowMotionMax</tabstop>
+  <tabstop>checkBoxCloudy</tabstop>
+  <tabstop>pushSnowLayerUp</tabstop>
+  <tabstop>pushSnowLayerDown</tabstop>
+  <tabstop>pushSnowLayerDelete</tabstop>
+  <tabstop>tableWidgetSnow</tabstop>
+  <tabstop>pushBokeh</tabstop>
+  <tabstop>pushBokehClear</tabstop>
+  <tabstop>sliderBokehCount</tabstop>
+  <tabstop>spinBokehCount</tabstop>
+  <tabstop>sliderBokehSide</tabstop>
+  <tabstop>spinBokehSide</tabstop>
+  <tabstop>sliderBokehFog</tabstop>
+  <tabstop>spinBokehFog</tabstop>
+  <tabstop>pushBokehFogColor</tabstop>
+  <tabstop>radioColorManual</tabstop>
+  <tabstop>radioColorClick</tabstop>
+  <tabstop>radioColorSmart</tabstop>
+  <tabstop>pushBokehColor1</tabstop>
+  <tabstop>pushBokehColor2</tabstop>
+  <tabstop>spinBokehSizeMin</tabstop>
+  <tabstop>spinBokehSizeMax</tabstop>
+  <tabstop>spinBokehRotationMin</tabstop>
+  <tabstop>spinBokehRotationMax</tabstop>
+  <tabstop>spinBokehOpacityMin</tabstop>
+  <tabstop>spinBokehOpacityMax</tabstop>
+  <tabstop>spinBokehBlurMin</tabstop>
+  <tabstop>spinBokehBlurMax</tabstop>
+  <tabstop>spinBokehThicknessMin</tabstop>
+  <tabstop>spinBokehThicknessMax</tabstop>
+  <tabstop>spinBokehEdgeOpacityMin</tabstop>
+  <tabstop>spinBokehEdgeOpacityMax</tabstop>
+  <tabstop>pushBokehLayerUp</tabstop>
+  <tabstop>pushBokehLayerDelete</tabstop>
+  <tabstop>tableWidgetBokeh</tabstop>
+  <tabstop>tabWidgetRealBokeh</tabstop>
+  <tabstop>spinRealBokehN</tabstop>
+  <tabstop>spinRealBokehS</tabstop>
+  <tabstop>doubleSpinRealBokeh</tabstop>
+  <tabstop>realBokehLimit</tabstop>
+  <tabstop>checkBoxRealBokehSharp</tabstop>
+  <tabstop>pushRealBokeh1</tabstop>
+  <tabstop>limit</tabstop>
+  <tabstop>XY</tabstop>
+  <tabstop>spinS</tabstop>
+  <tabstop>bokehSize</tabstop>
+  <tabstop>blur</tabstop>
+  <tabstop>pushRealBokeh2</tabstop>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>scrollAreaSnow</tabstop>
+  <tabstop>pushBokehLayerDown</tabstop>
+  <tabstop>scrollAreaImage</tabstop>
+  <tabstop>scrollAreaRain</tabstop>
+  <tabstop>scrollAreaBokeh</tabstop>
+  <tabstop>graphicsViewRealBokeh</tabstop>
+  <tabstop>spinBokehRadius</tabstop>
+  <tabstop>spinBokehArea</tabstop>
+  <tabstop>sliderBokehRadius</tabstop>
+  <tabstop>sliderBokehArea</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>doubleSpinScale</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>doubleSpinScaleX</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1000</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>950</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderBrightness</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SpinBrightness</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1114</x>
+     <y>538</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>983</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SpinColorG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderColorG</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>983</x>
+     <y>478</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1114</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderContrast</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SpinContrast</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1114</x>
+     <y>569</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>983</x>
+     <y>568</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderRainCount</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinRainCount</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1054</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1113</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderSnowCount</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinSnowCount</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1009</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1077</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SpinContrast</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderContrast</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>983</x>
+     <y>568</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1114</x>
+     <y>569</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinSnowCount</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderSnowCount</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1086</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1008</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinColorB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderColorB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>983</x>
+     <y>508</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1115</x>
+     <y>509</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderBokehCount</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBokehCount</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>978</x>
+     <y>185</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1079</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderColorG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SpinColorG</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1114</x>
+     <y>479</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>983</x>
+     <y>478</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinRainCount</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderRainCount</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1113</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1054</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinSnowFog</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderSnowFog</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1067</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1024</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderRainFog</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinRainFog</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1054</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1113</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderBokehSide</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBokehSide</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>979</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1075</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinSnowFog</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderSnowFog</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1075</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>992</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderColorB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinColorB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1115</x>
+     <y>509</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>983</x>
+     <y>508</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderColorR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SpinColorR</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1115</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>983</x>
+     <y>448</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinRotation</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1087</x>
+     <y>222</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1065</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBokehSide</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderBokehSide</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1073</x>
+     <y>212</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1010</x>
+     <y>217</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SpinBrightness</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderBrightness</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>983</x>
+     <y>538</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1114</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBokehCount</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderBokehCount</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1076</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1031</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinScale</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>doubleSpinScaleY</receiver>
+   <slot>setValue(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1000</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1000</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderBokehFog</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBokehFog</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1017</x>
+     <y>227</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1086</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SpinColorR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderColorR</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>983</x>
+     <y>448</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1115</x>
+     <y>448</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinRainFog</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderRainFog</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1113</x>
+     <y>180</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1054</x>
+     <y>179</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderSnowFog</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinSnowFog</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>979</x>
+     <y>186</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1087</x>
+     <y>193</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinRotation</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>dial</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1065</x>
+     <y>249</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1087</x>
+     <y>215</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBokehFog</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sliderBokehFog</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1066</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1029</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

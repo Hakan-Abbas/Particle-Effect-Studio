@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>fonts/Ubuntu.ttf</file>
+        <file>fonts/digital-7__mono_.ttf</file>
+        <file>icons/snow-icon.png</file>
+        <file>icons/snowing.png</file>
+        <file>icons/bokeh1.png</file>
+        <file>icons/bokeh2.png</file>
+        <file>icons/bokeh3.png</file>
+        <file>icons/down.png</file>
+        <file>icons/remove.png</file>
+        <file>icons/up.png</file>
+    </qresource>
+</RCC>
